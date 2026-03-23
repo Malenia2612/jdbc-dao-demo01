@@ -1,5 +1,7 @@
 package application;
 
+import java.util.List;
+
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
@@ -29,6 +31,12 @@ public class Program2 {
 		dep1.setName("Guerra");		
 		departmentDao.update(dep1);
 		System.out.println("Update completed!");
+		
+		System.out.println("\n=== TEST 4: department findAll =====");
+		List<Department> list = departmentDao.findAll();
+		for (Department p : list) {
+			System.out.println(p);
+		}
 
 	}
 
